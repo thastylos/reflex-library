@@ -25,8 +25,10 @@ package reflex.layouts
 		}
 		
 		override public function measure(children:Array):Point {
-			super.measure(children);
-			return new Point(960, 1200);
+			var point:Point = super.measure(children);
+			point.x = 960;
+			point.y = 1200;
+			return point;
 		}
 		
 		override public function update(children:Array, rectangle:Rectangle):void {
